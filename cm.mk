@@ -13,6 +13,10 @@ $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/moto/shamu/overlay-cm
 
+# Inherit vendor makefiles
+$(call inherit-product, vendor/upndwn4par/config/common.mk)
+$(call inherit-product, vendor/upndwn4par/config/shamu.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_shamu
 PRODUCT_BRAND := google
